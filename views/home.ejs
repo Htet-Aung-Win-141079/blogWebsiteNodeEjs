@@ -1,0 +1,13 @@
+<%- include("partials/header"); %>
+
+    <h1><%= hcontent %></h1>
+    
+    <h4 style="margin-top: 30px;">👇My blogs are here👇</h4>
+
+  <%  posts.forEach(post => { %>
+    <h3><%= post.title %></h3>
+    <p><%= post.body.substring(0,100)+"..." %><a href="/posts/<%= post.title %>">Read More</a></p>
+    
+<% }) %>
+
+<%- include("partials/footer"); %>
